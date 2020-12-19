@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--eigene CSS eingebunden-->
+    <link rel="stylesheet" href="../../Content/Layout.css">
+    <title>@ViewBag.Title - Portfolio ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <!--Navigationsleiste-->
+    <div class="navbar navbar-inverse navbar-fixed-top" id="navigation">
+        <!--DHBW Logo-->
+        <a href="../" id="logo">
+            <img alt="DHBW Logo" src="../../Content/DHBW-Logo.png" style="height: 50px;">
+        </a>
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <!--Navigationspunkte-->
+                    <li>@Html.ActionLink(".NET Framework", "Framework", "Information")</li>
+                    <li>@Html.ActionLink("ASP.NET", "FaktenASP", "Information")</li>
+                    <li>@Html.ActionLink("dynamische Webseiten", "DynamischeWebseiten", "Information")</li>
+                    <li>@Html.ActionLink("MVC", "MVC", "Information")</li>
+                    <!--if (User.Identity.GetUserName() != null) { }-->
+                    <li>@Html.ActionLink("Beispiel", "Index", "Students")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" id="body-container">
+        <!--Inhalte weiterer Views werden hier eingefügt-->
+        @RenderBody()
+        <!--Fußzeile-->
+        <footer>
+            <hr />
+            <p>18.12.2020 - Präsentation von: Simone Bregulla, Christian Dietl, Jasmin Trageser</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

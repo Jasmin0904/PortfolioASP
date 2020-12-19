@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewBag.Title = "ASP.NET";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="texte">
+    <p><b>A</b>ctive <b>S</b>erver <b>P</b>ages .NET</p>
+    <p>Web Application Framework</p>
+    <ul>
+        <li>Webanwendungen</li>
+        <li>Webservices</li>
+        <li>Webseiten</li>
+    </ul>
+    <p>limitiert auf Windows Betriebssysteme</p>
+    <p>Sprachen: C#, VB, F#</p>
+
+
+    <p>
+        <div>
+            <a href="#popupModel" role="button" class="link" id="ShowPopup" data-toggle="modal">Verwendung serverseitige Programmiersprachen</a>
+        </div>
+        <div id="popupModel" class="modal fade " role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Verwendung serverseitige Programmiersprachen</h3>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    <div id="chart1"></div>
+                                </div>
+
+
+                            </div>
+
+                            @section scripts{
+                                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                                <script>
+                                    google.charts.load('current', { 'packages': ['corechart'] });
+                                    google.charts.setOnLoadCallback(drawChart);
+
+
+                                    function drawChart() {
+                                        var data = new google.visualization.DataTable();
+                                        data.addColumn('string', 'Sprache');
+                                        data.addColumn('number', 'Prozent');
+                                        data.addRows([
+                                            ['PHP', { v: 79, f: '79%' }],
+                                            ['ASP.NET', { v: 11.5, f: '11.5%' }],
+                                            ['Java', { v: 4, f: '4%' }],
+                                            ['Andere', { v: 5.5, f: '5.5%' }],
+                                        ]);
+
+                                        // Simple Pie Chart:
+                                        var option = {
+                                            width: 500,
+                                            height: 400,
+                                            colors: ['#7d878d', '#e2001a', '#000000', '#e5e5e5'],
+                                        };
+
+                                        var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+                                        chart.draw(data, option);
+
+                                    }
+                                </script>
+                            }
+                            <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+                        <div style="padding:5px;">
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </p>
+</div>
+<img alt="Abbildung ASP.NET" src="../../Content/ASP-NET.png" style="height: 265px; float: right;">
+
+<form method="get" action="/Information/DynamischeWebseiten" target="_self">
+    <button type="submit" class="btn-next">dynamische Webseiten &raquo;</button>
+</form>
+<br />

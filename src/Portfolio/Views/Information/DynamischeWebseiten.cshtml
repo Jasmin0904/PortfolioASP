@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Dynamische Webseiten";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>Neuerzeugung bei Aufruf</p>
+<ul>
+    <li>Benutzereingabe</li>
+    <li>Datum bzw. Uhrzeit</li>
+</ul>
+
+<p>Webserver</p>
+<ul>
+    <li>generiert einer HTML-Datei</li>
+    <li>Übermittlung an den Client</li>
+</ul>
+<p>Flexibilität</p>
+
+<form method="get" action="/Information/MVC" target="_self">
+    <button type="submit" class="btn-next">MVC &raquo;</button>
+</form>
+<br />

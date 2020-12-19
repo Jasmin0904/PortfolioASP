@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "MVC";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div style="text-align: center;">
+    <img alt="Abbildung MVC Ablauf" src="../../Content/MVC-Uebersicht.png" style="height: 400px;">
+</div>
+<br />
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+        <div class="item active">
+            <br />
+            <br />
+            <p>
+                <b>Model</b> -
+                <b>View</b> -
+                <b>Controller</b>
+            </p>
+            <br />
+            <br />
+        </div>
+
+        <div class="item">
+            <p><b>Controller</b></p>
+            <p>Programmsteuerung</p>
+            <ul>
+                <li>behandelt die HTTP-Anfragen</li>
+                <li>enthält Aktionsmethoden</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <p><b>Model</b></p>
+            <p>Datenmodelle</p>
+            <ul>
+                <li>Kommunikation mit der Datenbank</li>
+                <li>enthält Struktur der Datenbank</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <p><b>View</b></p>
+            <p>Präsentationssicht</p>
+            <ul>
+                <li>enhält HTML-Dateien</li>
+                <li>Logik für die Darstellung der Inhalte</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

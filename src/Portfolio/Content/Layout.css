@@ -1,0 +1,80 @@
+﻿#logo {
+    float: left;
+    padding-top: 3px;
+    padding-left: 15px;
+}
+#navigation {
+    
+    background-color: white;
+    border-color: white;
+    background: -webkit-linear-gradient(to right, white, #e5e5e5, #7d878d, #e2001a);
+    background: linear-gradient(to right, white, #e5e5e5, #7d878d, #e2001a);
+    border: 0;
+}
+
+#body-container {
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+#willkommen {
+    text-align: center;
+    font-size: 185px;
+    color: #e2001a;
+}
+#h2startseite {
+    text-align: center;
+    font-size: 37px;
+    color: #e2001a;
+}
+#body-container h2 {
+    font-size: 40px;
+}
+.texte {
+    float: left;
+}
+.link {
+    color: #333333;
+}
+    a.link:hover, a.link:focus {
+    color: #333333;
+    text-decoration: none;
+    }
+.item {
+    padding: 0 100px 0 250px;
+}
+.btn-next {
+    text-align: center;
+    border: 1px solid #e2001a;
+    border-radius: 0.5em;
+    padding: 10px;
+    background-color: #e2001a;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    bottom: 55px;
+    right: 200px;
+}
+    .btn-next:hover {
+        background-color: #C00017;
+        border: 1px solid #C00017;
+    }
+    .btn-next:focus {
+        border: 1px solid #e2001a;
+    }
+#login {
+    font-size: 16px;
+}
+.h4loginregister {
+    font-size: 16px;
+}
+.form-group {
+    font-size: 16px;
+}
+footer {
+    width: 1125px;
+    font-size: 12px;
+    color: grey;
+    position: absolute;
+    bottom: 0;
+}
